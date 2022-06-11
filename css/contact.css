@@ -1,0 +1,210 @@
+* {
+  color: black;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ヘッダー */
+/* ハンバーガーメニュー */
+a {
+  text-decoration: none;
+}
+
+.nav {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  background: #eee;
+  transition: .7s;
+  text-align: center;
+  position: fixed;
+}
+
+.nav ul {
+  padding-top: 80px;
+}
+
+.nav ul li {
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.nav ul a {
+  color: blue;
+}
+
+.menu {
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  top: 20px;
+}
+
+.menu__line--top,
+.menu__line--middle,
+.menu__line--bottom {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.menu__line--top {
+  top: 0;
+}
+
+.menu__line--middle {
+  top: 14px;
+}
+
+.menu__line--bottom {
+  bottom: 0;
+}
+
+.menu.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+
+.menu.open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+
+.in {
+  transform: translateX(100%);
+}
+
+.header-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 18px;
+}
+
+@media screen and (max-width:768px) {
+  .menu {
+    display: block;
+  }
+
+  .header-button {
+    display: none;
+  }
+}
+
+/* ヘッダー */
+.home-button {
+  font-size: 25px;
+  margin-left: 3vw;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  position: sticky;
+}
+
+a {
+  text-decoration: none;
+}
+/* ヘッダーここまで */
+/* フッター */
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(68, 68, 68);
+  margin-bottom: 0;
+  line-height: 50px;
+}
+footer small{
+  color: white;
+  font-size: 12px;
+  margin-left: 2vw;
+}
+.footerbutton::after{
+  content: "|";
+  display: inline;
+  color:white;
+  padding-left: 23px;
+}
+.footer-button a{
+  color:white;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  display: inline-block;
+  padding-left: 20px;
+}
+@media screen and (max-width:768px) {
+  .footer-button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-button a {
+    line-height: 20px;
+  }
+
+  .footerbutton::after {
+    display: none;
+  }
+}
+/* フッターここまで */
+/* 内容 */
+h1{
+  background-image: url(../img/mv.png);
+  line-height: 250px;
+  color:white;
+  font-size: 32px;
+  text-align: center;
+  height:250px;
+  vertical-align: middle;
+  width:auto;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.formarea{
+  margin-top: 7vh;
+  margin-left:25vw;
+  line-height: 30px;
+}
+label{
+  display: block;
+}
+input{
+  width:50vw;
+}
+textarea{
+  width:50vw;
+}
+.submit{
+  background-color: black;
+  color: white;
+  width:24vw;
+  margin-left: 13vw;
+  margin-top: 4vh;
+  height: 50px;
+  margin-bottom: 50px;
+}

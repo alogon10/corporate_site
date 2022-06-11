@@ -1,0 +1,383 @@
+* {
+  color: black;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ヘッダー */
+/* ハンバーガーメニュー */
+a {
+  text-decoration: none;
+}
+
+.nav {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  background: #eee;
+  transition: .7s;
+  text-align: center;
+  position: fixed;
+}
+
+.nav ul {
+  padding-top: 80px;
+}
+
+.nav ul li {
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.nav ul a {
+  color: blue;
+}
+
+.menu {
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  top: 20px;
+}
+
+.menu__line--top,
+.menu__line--middle,
+.menu__line--bottom {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.menu__line--top {
+  top: 0;
+}
+
+.menu__line--middle {
+  top: 14px;
+}
+
+.menu__line--bottom {
+  bottom: 0;
+}
+
+.menu.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+
+.menu.open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+
+.in {
+  transform: translateX(100%);
+}
+
+.header-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 18px;
+}
+
+@media screen and (max-width:768px) {
+  .menu {
+    display: block;
+  }
+
+  .header-button {
+    display: none;
+  }
+}
+
+/* ヘッダー */
+.home-button {
+  font-size: 25px;
+  margin-left: 3vw;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  position: sticky;
+}
+
+a {
+  text-decoration: none;
+}
+/* ヘッダーここまで */
+/* フッター */
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(68, 68, 68);
+  margin-bottom: 0;
+  line-height: 50px;
+}
+footer small{
+  color: white;
+  font-size: 12px;
+  margin-left: 2vw;
+}
+.footerbutton::after{
+  content: "|";
+  display: inline;
+  color:white;
+  padding-left: 23px;
+}
+.footer-button a{
+  color:white;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  display: inline-block;
+  padding-left: 20px;
+}
+@media screen and (max-width:768px) {
+  .footer-button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-button a {
+    line-height: 20px;
+  }
+
+  .footerbutton::after {
+    display: none;
+  }
+}
+/* フッターここまで */
+/* お問い合わせボタン */
+.inquiry p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.inquiry {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.inquiry h3 {
+  font-size: 24px;
+}
+
+.inquiry-button {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  line-height: 40px;
+  display: inline-block;
+  width: 20vw;
+  margin-bottom: 80px;
+}
+/* お問い合わせボタンここまで */
+/* 内容 */
+.top-text{
+  background-image: url(../img/mv.png);
+  text-align: center;
+  height:700px;
+  vertical-align: middle;
+  width:100vw;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top-text h1{
+  color: white;
+  font-size:48px;
+}
+.top-text span{
+  color: white;
+  font-size: 18px;
+}
+/* topここまで */
+/* 想い */
+.thought{
+  background-color: rgb(20, 20, 20);
+  padding: 80px;
+  line-height: 20px;
+}
+.thought h2{
+  margin-bottom: 1em;
+  font-size: 30px;
+  color:white;
+}
+.thought p{
+  color: white;
+  line-height: 24px;
+}
+/* サービス */
+.service-title{
+  font-size: 30px;
+  text-align: center;
+  display: block;
+  width:20vw;
+  margin: 80px 40% 0 40%;
+  }
+.service-content {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  margin-left: 7vw;
+}
+.service-content img {
+  width: 40vw;
+  margin-right: 20px;
+}
+[class^="content-card"] {
+  margin-top: 30px;
+  display:inline-block;
+  padding-top: 30px;
+  width:45vw;
+}
+.service-content h2 {
+  font-size: 25px;
+  margin-top: 0.5em;
+}
+.content-text {
+  line-height: 30px;
+  display: block;
+  width:40vw;
+}
+.service-link a{
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  line-height: 40px;
+  display: inline-block;
+  width: 30vw;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-left: 28vw;
+  margin-top: 30px;
+}
+/* ニュース */
+.news {
+  margin: 30px auto;
+  text-align: center;
+  background-color: rgb(20, 20, 20);
+  height: 350px;
+  padding: 50px 0 0 0;
+}
+.news h2{
+  font-size:30px;
+  color:white;
+  text-align: left;
+  margin-left: 10vw;
+}
+.news-top{
+  display: flex;
+  justify-content: space-between;
+}
+.news a{
+  display: inline-block;
+  background-color: red;
+  color: white;
+  line-height: 40px;
+  width: 180px;
+  margin-right: 10vw;
+}
+.news p {
+  margin: 10px;
+  background-color: white;
+  display: inline-block;
+  width: 80vw;
+  line-height: 60px;
+  padding-left: 1em;
+  text-align: left;
+}
+.news-text {
+  padding-left: 1em;
+}
+/* 社員ブログ */
+.blog h2 {
+  font-size: 30px;
+  text-align: center;
+  text-align: 80px;
+  height: 40px;
+}
+.card-img {
+  width: 25vw;
+  display: inline-block;
+}
+.blog {
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+.content-text {
+  width: 25vw;
+  display: inline-block;
+  font-size: 18px;
+}
+.content-date {
+  width: 20vw;
+  font-size: 14px;
+}
+.blog-cards{
+  display: flex;
+  justify-content: space-around;
+}
+[class^="blog-content-card"]{
+  width: 25vw;
+}
+.blog-link a {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  line-height: 45px;
+  display: inline-block;
+  width: 20vw;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 40vw;
+  margin-top: 60px;
+}
+/* company recruitリンク */
+.com-link{
+  background-color: red;
+  color: white;
+  display: inline-block;
+  width:50vw;
+  line-height: 250px;
+}
+.rec-link{
+  background-color: black;
+  color: white;
+  display: inline-block;
+  width: 50vw;
+  line-height: 250px;
+
+}
+.com-rec_link{
+  display: flex;
+  text-align: center;
+  font-size: 30px;
+}
