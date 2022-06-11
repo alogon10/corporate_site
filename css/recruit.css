@@ -50,6 +50,7 @@ a {
   position: relative;
   display: none;
   top: 20px;
+  right:40px;
 }
 
 .menu__line--top,
@@ -154,7 +155,17 @@ footer small{
   justify-content: space-between;
   display: inline-block;
   padding-left: 20px;
-}@media screen and (max-width:768px) {
+}
+@media screen and (max-width:768px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  footer small {
+    margin-top: 45px;
+  }
+
   .footer-button {
     display: flex;
     flex-direction: column;
